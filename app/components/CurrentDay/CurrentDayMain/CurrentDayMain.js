@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './CurrentMain.css';
+import './CurrentDayMain.css';
 import { connect } from 'react-redux';
-import Sunny from '../UI/WeatherIcons/Sunny';
-import SunnyCloud from '../UI/WeatherIcons/SunnyCloud';
-import Cloudy from '../UI/WeatherIcons/Cloudy';
-import Snowy from '../UI/WeatherIcons/Snowy';
+import Sunny from '../../UI/WeatherIcons/Sunny';
+import SunnyCloud from '../../UI/WeatherIcons/SunnyCloud';
+import Cloudy from '../../UI/WeatherIcons/Cloudy';
+import Snowy from '../../UI/WeatherIcons/Snowy';
 
 class CurrentMain extends Component {
   getWeekDay() {

@@ -1,0 +1,70 @@
+.current-day-table {
+  border-radius: 3rem;
+}
+.current-day-table__content {
+  display: flex;
+  flex-direction: column;
+}
+.extra-current-day-table {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  position: relative;
+}
+.extra-current-day-table div {
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 90%;
+  border: 1px solid rgb(34, 47, 87);
+  padding: 7px 18px;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 1200px) {
+  .extra-current-day-table {
+    margin-top: 2rem;
+    padding: 5px 5px;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 555px) {
+  .extra-current-day-table div {
+    margin-bottom: 0.3rem;
+  }
+}
+
+.extra-current-day-table div:last-child {
+  margin-bottom: 0;
+}
+.extra-current-day-table span {
+  text-align: center;
+  background: rgb(6, 121, 21);
+  color: white;
+  margin-left: 15px;
+  padding: 4px;
+  border-radius: 8px;
+}
+.extra-current-day-table i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+.wind {
+  color: rgb(32, 99, 243);
+}
+.sun-i {
+  color: yellow;
+}
+.sunset {
+  color: black;
+}
+.press {
+  font-size: 1.3rem !important;
+  color: orange;
+}
+.humidity {
+  color: rgb(0, 160, 253);
+}
