@@ -3,6 +3,7 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error",
+    "allowElseIf": true,
     "no-unused-vars": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   }
