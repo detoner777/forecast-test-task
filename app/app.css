@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    #141e30,
+    rgb(45, 68, 95),
+    #141e30
+  );
+  background-repeat: no-repeat;
+  color: white;
+  box-shadow: 15px 15px 200px rgb(0, 0, 0) inset;
+}
+
+.App {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
