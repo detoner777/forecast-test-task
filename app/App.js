@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import './App.css';
 
 import CurrentDay from './components/CurrentDay/CurrentDay';
+import ForecastData from './components/ForecastData/ForecastData';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <CurrentDay />
         </Switch>
+        <ForecastData />
       </Router>
     </div>
   );

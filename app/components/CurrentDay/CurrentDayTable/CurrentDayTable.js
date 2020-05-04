@@ -13,9 +13,7 @@ class CarrentDayTable extends Component {
   }
   render() {
     const { humidity, pressure, sunrise, sunset } = this.props;
-    let windSpeed = this.props.windSpeed;
-
-    windSpeed = parseInt(windSpeed);
+    let windSpeed = parseInt(this.props.windSpeed);
 
     return (
       <div className="current-day-table">
