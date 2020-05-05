@@ -24,6 +24,13 @@ export const getWeatherFail = (error) => {
   };
 };
 
+export const addSearchedCity = (city) => {
+  return {
+    type: actionTypes.ADD_SEARCHED_CITY,
+    payload: city,
+  };
+};
+
 const getCurrentWeather = (name) => {
   return axios.get(`/weather?q=${name}&appid=${KEY}&units=metric`);
 };

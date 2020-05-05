@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { getWeather } from '../../store/actions/actions';
+import { getWeather, addSearchedCity } from '../../store/actions/actions';
 import './search.css';
 
 const Search = (props) => {
@@ -13,6 +13,7 @@ const Search = (props) => {
     e.preventDefault();
     if (value.trim() !== '') {
       props.onSearchSubmit(value);
+      props.addCity(value);
     }
   };
   return (
@@ -36,6 +37,7 @@ const Search = (props) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onSearchSubmit: (name) => dispatch(getWeather(name)),
+    addCity: (name) => dispatch(addSearchedCity(name)),
   };
 };
 
