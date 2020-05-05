@@ -23,6 +23,7 @@ const reducer = (state = initalState, action) => {
         loading: false,
         currentWeather: action.payload.currentWeather,
         forecast: action.payload.forecast,
+        citys: state.citys.concat(action.payload.city.payload),
       };
     case actionTypes.GET_WEATHER_FAIL:
       //   console.log(action);
@@ -33,12 +34,12 @@ const reducer = (state = initalState, action) => {
         loading: false,
         error: action.payload.message,
       };
-    case actionTypes.ADD_SEARCHED_CITY:
-      return {
-        ...state,
-        // citys: action.payload,
-        citys: state.citys.concat(action.payload),
-      };
+    // case actionTypes.ADD_SEARCHED_CITY:
+    //   return {
+    //     ...state,
+    //     // citys: action.payload,
+    //     citys: state.citys.concat(action.payload),
+    //   };
     default:
       return state;
   }

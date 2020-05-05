@@ -1,0 +1,34 @@
+.searched-city-item {
+  position: relative;
+  margin: 5px;
+  display: inline-block;
+  z-index: 100;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px 25px 10px 25px;
+  line-height: 6px;
+  text-align: center;
+  border-radius: 3rem;
+  transform: translateY(-4.5%);
+  transition: 0.3s;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom right,
+    rgb(15, 23, 37),
+    rgb(29, 43, 59)
+  );
+}
+
+.searched-city-item:hover {
+  cursor: pointer;
+  color: rgb(169, 122, 214);
+  transform: translateY(-14.5%);
+  transition: 0.3s;
+  box-shadow: rgb(29, 43, 59);
+}
+
+@media (max-width: 414px) {
+  .searched-city-item {
+    padding: 10px 10px 10px 10px;
+  }
+}

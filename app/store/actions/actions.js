@@ -1,18 +1,20 @@
 import * as actionTypes from './actionTypes';
 import axios from '../../services/axios-weather';
 const KEY = '114bb1a39ac2c5de08d0cab14d69ca83';
+
 export const getWeatherStart = () => {
   return {
     type: actionTypes.GET_WEATHER_START,
   };
 };
 
-export const getWeatherSuccess = (currentWeather, forecast) => {
+export const getWeatherSuccess = (currentWeather, forecast, city) => {
   return {
     type: actionTypes.GET_WEATHER_SUCCESS,
     payload: {
       currentWeather,
       forecast,
+      city,
     },
   };
 };
@@ -41,10 +43,18 @@ const getForecast = (name) => {
 export const getWeather = (name) => {
   return (dispatch) => {
     dispatch(getWeatherStart());
-    Promise.all([getCurrentWeather(name), getForecast(name)])
+    Promise.all([
+      getCurrentWeather(name),
+      getForecast(name),
+      addSearchedCity(name),
+    ])
       .then((res) => {
-        dispatch(getWeatherSuccess(res[0].data, res[1].data));
+        dispatch(
+          getWeatherSuccess(res[0].data, res[1].data, addSearchedCity(name))
+          // addSearchedCity(name)
+        );
       })
+
       .catch((error) => {
         dispatch(getWeatherFail(error));
       });

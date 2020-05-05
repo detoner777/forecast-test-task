@@ -11,12 +11,14 @@ import './App.css';
 
 import CurrentDay from './components/CurrentDay/CurrentDay';
 import ForecastData from './components/ForecastData/ForecastData';
+import SearchedCitys from './components/SearchedCitys/SearchedCitys';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Search />
+        <SearchedCitys />
         <Switch>
           <Route path="/" exact component={CurrentDay} />
           <Route path="/forecast" component={ForecastData} />

@@ -5,7 +5,7 @@
   align-items: center;
   margin: 0 auto;
   transition: 0.3s;
-  margin-top: 30px;
+  margin-top: 15px;
   margin-bottom: 30px;
 }
 
@@ -30,6 +30,7 @@
   margin: 30px auto 0 auto;
   text-decoration: none;
   transition: all 0.3s ease-out;
+  margin-bottom: 20px;
 }
 
 .link-redirect:hover {
@@ -43,5 +44,6 @@
     flex-direction: column;
     transform: translateY(-4.5%);
     transition: 0.3s;
+    margin-top: 30px;
   }
 }
