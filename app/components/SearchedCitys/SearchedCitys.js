@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './SearchedCitys.css';
 import City from './City/City';
+import { v4 as uuidv4 } from 'uuid';
 
 import { connect } from 'react-redux';
 
@@ -12,7 +13,7 @@ function SearchedCitys(props) {
     <Fragment>
       <div className="searched-citys-container">
         {citys.map((city) => (
-          <City key={city.index} city={city} />
+          <City key={uuidv4()} city={city} />
         ))}
       </div>
     </Fragment>
