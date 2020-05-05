@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './ForecastData.css';
 import Forecast from './Forecast/Forecast';
 import { connect } from 'react-redux';
+
+import { Link } from 'react-router-dom';
 
 class ForecastData extends Component {
   render() {
@@ -33,16 +35,23 @@ class ForecastData extends Component {
     }
 
     return (
-      <div className="forecast-data">
-        {temperatures.map((temperature) => (
-          <Forecast
-            key={temperature.weekDay}
-            tempAfternoon={parseInt(temperature.tempAfternoon).toFixed(0)}
-            tempNight={parseInt(temperature.tempNight).toFixed(0)}
-            day={temperature.weekDay}
-          />
-        ))}
-      </div>
+      <Fragment>
+        <div className="forecast-data">
+          {temperatures.map((temperature) => (
+            <Forecast
+              key={temperature.weekDay}
+              tempAfternoon={parseInt(temperature.tempAfternoon).toFixed(0)}
+              tempNight={parseInt(temperature.tempNight).toFixed(0)}
+              day={temperature.weekDay}
+            />
+          ))}
+        </div>
+        <div>
+          <Link className="link-redirect" to="/">
+            Back
+          </Link>
+        </div>
+      </Fragment>
     );
   }
 }

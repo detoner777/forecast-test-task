@@ -1,6 +1,11 @@
 import React from 'react';
 import Search from './components/Search/Search';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.css';
 
@@ -13,9 +18,9 @@ function App() {
       <Router>
         <Search />
         <Switch>
-          <CurrentDay />
+          <Route path="/" exact component={CurrentDay} />
+          <Route path="/forecast" component={ForecastData} />
         </Switch>
-        <ForecastData />
       </Router>
     </div>
   );

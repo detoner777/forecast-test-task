@@ -1,5 +1,47 @@
 .current-day-wrapp {
   max-width: 900px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
+  transition: 0.3s;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.link-redirect {
+  width: 100%;
+  max-width: 215px;
+  height: 40px;
+  background: linear-gradient(to left, rgb(46, 73, 104) 50%, #ffffff 50%);
+  background-size: 200% 100%;
+  background-position: right center;
+  transition: all 0.5s;
+  color: white;
+  font-weight: 800;
+  font-size: 18px;
+  display: block;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 38px;
+  color: #ffffff;
+  position: relative;
+  cursor: pointer;
+  margin: 30px auto 0 auto;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+
+.link-redirect:hover {
+  background: white;
+  color: rgb(46, 73, 104);
+  font-size: 19px;
+}
+
+@media (max-width: 1200px) {
+  .current-day-wrapp {
+    flex-direction: column;
+    transform: translateY(-4.5%);
+    transition: 0.3s;
+  }
 }
