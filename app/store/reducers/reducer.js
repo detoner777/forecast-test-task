@@ -23,7 +23,9 @@ const reducer = (state = initalState, action) => {
         loading: false,
         currentWeather: action.payload.currentWeather,
         forecast: action.payload.forecast,
-        citys: state.citys.concat(action.payload.city.payload),
+        citys: [
+          ...new Set(state.citys.concat(action.payload.city.payload)),
+        ].slice(-5),
       };
     case actionTypes.GET_WEATHER_FAIL:
       //   console.log(action);
